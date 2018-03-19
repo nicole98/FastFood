@@ -1,7 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Nicole Tao
+ * Pizza.java
+ * This program will calculate the price and change at a fast food restaurant
+ * March 18th, 2018
  */
 package FastFood;
 
@@ -200,18 +201,22 @@ public class FastFood extends javax.swing.JFrame {
     private void buttonCalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCalcActionPerformed
         double burgers, fries, drinks, money, totalBefore, tax, total, change;
         
+        //This converts String values to Double values
         burgers = Double.parseDouble(textBurgers.getText());
         fries = Double.parseDouble(textFries.getText());
         drinks = Double.parseDouble(textDrink.getText());
         money = Double.parseDouble(textMoney.getText());
         
+        //This calculate the price of each item
         totalBefore = burgers*2.49 + fries*1.89 + drinks*0.99;
         tax = totalBefore*0.13;
         total = totalBefore + tax;
         change = money - total;
         
+        //Decimal format for the prices
         DecimalFormat x = new DecimalFormat ("$###.00");
         
+        //This codes what will apprear on the output labels, calclations will display in decimal format
         labelBefore2.setText(x.format(totalBefore));
         labelTax2.setText(x.format (tax));
         labelTotal2.setText(x.format(total));

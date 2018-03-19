@@ -1,6 +1,6 @@
 /*
  * Nicole Tao
- * Pizza.java
+ * FastFood.java
  * This program will calculate the price and change at a fast food restaurant
  * March 18th, 2018
  */
